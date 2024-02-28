@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IGeneralContidion, IGeneralContidionFormGroup, IMechanic, IMechanicFormGroup, IVehicle, IVehicleFormGroup } from '../interfaces/app/vehicle';
+import { IGeneralContidion, IGeneralContidionFormGroup, IGeneralState, IGeneralStateFormGroup, IMechanic, IMechanicFormGroup, IVehicle, IVehicleFormGroup } from '../interfaces/app/vehicle';
 import { FormBuilder } from '@angular/forms';
 
 @Injectable({
@@ -69,4 +69,20 @@ export class FormsService {
     }) as IMechanicFormGroup
   }
 
+  /**
+   * function to create general state form
+   */
+  newFormGeneralState(generalState?: IGeneralState): IGeneralStateFormGroup {
+    return this.fb.group({
+      ceiling: [generalState?.ceiling || ''],
+      bonnet: [generalState?.bonnet || ''],
+      doors: [generalState?.doors || ''],
+      steps: [generalState?.steps || ''],
+      tank: [generalState?.tank || ''],
+      mudguards: [generalState?.mudguards || ''],
+      doorLocks: [generalState?.doorLocks || ''],
+      valdes: [generalState?.valdes || '']
+    }) as IGeneralStateFormGroup
+  }
 }
+

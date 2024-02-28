@@ -20,6 +20,8 @@ export interface IVehicle {
     vehicleKilometraje?: string;
     numberSerie?: string;
     systemMechanic?: IMechanic;
+    // general state
+    generalState?: IGeneralState;
 }
 
 export interface IGeneralContidion {
@@ -36,7 +38,7 @@ export interface IMechanic {
     tires?: string;
     emergencyTire?: string;
     glasses?: string;
-    sideMirrors? : string;
+    sideMirrors?: string;
     seating?: string;
     belts?: string;
     windshieldWiper?: string;
@@ -52,6 +54,16 @@ export interface IMechanic {
     liquefies?: string;
 }
 
+export interface IGeneralState {
+    ceiling?: string;
+    bonnet?: string;
+    doors?: string;
+    steps?: string;
+    tank?: string;
+    mudguards?: string;
+    doorLocks?: string;
+    valdes?: string;
+}
 export interface IGeneralContidionFormGroup extends FormGroup {
     value: IGeneralContidion;
     controls: {
@@ -102,6 +114,20 @@ export interface IMechanicFormGroup extends FormGroup {
         suspension: FormControl<string>
         lubricationOfGrease: FormControl<string>
         liquefies: FormControl<string>
+    }
+}
+
+export interface IGeneralStateFormGroup extends FormGroup {
+    value: IGeneralState;
+    controls: {
+        ceiling: FormControl<string>
+        bonnet: FormControl<string>
+        doors: FormControl<string>
+        steps: FormControl<string>
+        tank: FormControl<string>
+        mudguards: FormControl<string>
+        doorLocks: FormControl<string>
+        valdes: FormControl<string>
     }
 }
 

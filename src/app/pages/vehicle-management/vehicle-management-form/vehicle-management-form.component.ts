@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IGeneralContidionFormGroup, IMechanicFormGroup, IVehicleFormGroup, selectOptionsOfStates } from '../../interfaces/app/vehicle';
-import { FormsService } from '../../services/forms.service';
+import { IGeneralContidionFormGroup, IMechanicFormGroup, IVehicleFormGroup, selectOptionsOfStates } from '../../../interfaces/app/vehicle';
+import { FormsService } from '../../../services/forms.service';
 
 @Component({
   selector: 'app-vehicle-management-form',

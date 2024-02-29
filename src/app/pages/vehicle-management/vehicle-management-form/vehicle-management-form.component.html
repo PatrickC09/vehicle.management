@@ -18,31 +18,37 @@
                                 <c-container>
                                     <c-row class="d-flex justify-content-between text-center py-1">
                                         <c-col md="4">
-                                            <label cLabel class="text-info"> Logo de Empresa</label> <br>
-                                            <img src="" alt="src">
+                                            <label cLabel class="title"> <b> LOGO DE LA EMPRESA </b></label> <br>
+                                            <img src="assets/logos/logo-empre-1.png" alt="src" width="200" height="100">
                                         </c-col>
                                         <c-col md="4">
-                                            <label cLabel class="text-info"> Nombre de la Empresa</label> <br>
-                                            <label cLabel>NOMBRE EMPRESA TEST</label>
+                                            <label cLabel class="title"> <b> NOMBRE DE LA EMPRESA </b></label> <br>
+                                            <label cLabel>FERLATCHECK SOFTWARE</label>
                                         </c-col>
                                         <c-col md="4">
-                                            <label cLabel class="text-info"> Codigó de Check List #</label> <br>
+                                            <label cLabel class="title"> <b> CÓDIGO DE CHECK LIST # </b></label> <br>
                                             <label cLabel>#150908</label>
                                         </c-col>
-                                    </c-row> <br>
+                                    </c-row>
                                     <c-row class="d-flex justify-content-center text-center py-1">
+                                        <c-col>
+
+                                        </c-col>
                                         <c-col md="4">
                                             <!-- <label cLabel class="text-info"> Nombre de la Empresa</label> <br> -->
                                             <label cLabel>UNIDAD DE CONTROL</label>
                                         </c-col>
                                         <c-col md="4">
-                                            <label cLabel class="text-info"> FECHA DE APROBACIÓN PROCEDIMIENTO
+                                            <label cLabel class="title"> <b> FECHA DE APROBACIÓN PROCEDIMIENTO </b>
                                             </label> <br>
                                             <!-- escribir fecha -->
                                             <input cFormControl type="date">
                                         </c-col>
                                     </c-row> <br>
                                     <c-row class="d-flex justify-content-center text-center py-1">
+                                        <c-col>
+
+                                        </c-col>
                                         <c-col md="4">
                                             <label cLabel>NOMBRE DEL PROCEDIMIENTO</label>
                                         </c-col>
@@ -178,7 +184,8 @@
                                                 </select>
                                             </c-col>
                                             <c-col>
-                                                <input cFormControl type="text" [value]="selectedOption[0]" readonly formControlName="typeLicense">
+                                                <input cFormControl type="text" [value]="selectedOption[0]" readonly
+                                                    formControlName="typeLicense">
                                             </c-col>
                                         </c-row>
                                         <!-- segunda fila -->
@@ -198,7 +205,8 @@
                                                 </select>
                                             </c-col>
                                             <c-col>
-                                                <input cFormControl type="text" [value]="selectedOption[1]" readonly formControlName="tuition">
+                                                <input cFormControl type="text" [value]="selectedOption[1]" readonly
+                                                    formControlName="tuition">
                                             </c-col>
                                         </c-row>
                                         <!-- Segunda fila -->
@@ -218,7 +226,8 @@
                                                 </select>
                                             </c-col>
                                             <c-col>
-                                                <input cFormControl type="text" [value]="selectedOption[2]" readonly formControlName="defensiveDrivingCourse">
+                                                <input cFormControl type="text" [value]="selectedOption[2]" readonly
+                                                    formControlName="defensiveDrivingCourse">
                                             </c-col>
                                         </c-row>
                                     </form>

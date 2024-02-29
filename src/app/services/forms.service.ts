@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IElectricSystem, IElectricSystemFormGroup, IGeneralContidion, IGeneralContidionFormGroup, IGeneralState, IGeneralStateFormGroup, IMechanic, IMechanicFormGroup, ISafetyAccessories, ISafetyAccessoriesFormGroup, IVehicle, IVehicleFormGroup } from '../interfaces/app/vehicle';
+import { IElectricSystem, IElectricSystemFormGroup, IGeneralContidion, IGeneralContidionFormGroup, IGeneralState, IGeneralStateFormGroup, IInspectionData, IInspectionDataFormGroup, IMechanic, IMechanicFormGroup, ISafetyAccessories, ISafetyAccessoriesFormGroup, IVehicle, IVehicleFormGroup } from '../interfaces/app/vehicle';
 import { FormBuilder } from '@angular/forms';
 
 @Injectable({
@@ -122,6 +122,23 @@ export class FormsService {
       rollbarInternalCage: [safetyAccesory?.rollbarInternalCage || ''],
       reflectiveTapes: [safetyAccesory?.reflectiveTapes || '']
     }) as ISafetyAccessoriesFormGroup
+  }
+
+  /**
+   * function to create inspection data form
+   */
+  newFormInspectionData(inspectionData?: IInspectionData): IInspectionDataFormGroup {
+    return this.fb.group({
+      teamReport: [inspectionData?.teamReport || ''],
+      inspectorName: [inspectionData?.inspectorName || ''],
+      approverName: [inspectionData?.approverName || ''],
+      inspectorCargo: [inspectionData?.inspectorCargo || ''],
+      approverCargo: [inspectionData?.approverCargo || ''],
+      inspectorFirmaI: [inspectionData?.inspectorFirmaI || ''],
+      approverFirma: [inspectionData?.approverFirma || ''],
+      inspectorDate: [inspectionData?.inspectorDate || ''],
+      approverDate: [inspectionData?.approverDate || '']
+    }) as IInspectionDataFormGroup
   }
 
 }

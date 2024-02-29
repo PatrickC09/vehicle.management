@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IElectricSystem, IElectricSystemFormGroup, IGeneralContidionFormGroup, IGeneralStateFormGroup, IMechanicFormGroup, ISafetyAccessoriesFormGroup, IVehicleFormGroup, selectOptionsOfStates } from '../../../interfaces/app/vehicle';
+import { IElectricSystem, IElectricSystemFormGroup, IGeneralContidionFormGroup, IGeneralStateFormGroup, IInspectionDataFormGroup, IMechanicFormGroup, ISafetyAccessoriesFormGroup, IVehicleFormGroup, selectOptionsOfStates } from '../../../interfaces/app/vehicle';
 import { FormsService } from '../../../services/forms.service';
 import { Router } from '@angular/router';
 
@@ -17,6 +17,7 @@ export class VehicleManagementFormComponent implements OnInit {
   fGeneralSate: IGeneralStateFormGroup = this.formService.newFormGeneralState();
   fElectricSystem: IElectricSystemFormGroup = this.formService.newFormElectricSystem();
   fSafetyAccessories: ISafetyAccessoriesFormGroup = this.formService.newFormSafetyAccesory();
+  fInspectionData: IInspectionDataFormGroup = this.formService.newFormInspectionData();
 
   // select options
   selectOptions = selectOptionsOfStates
@@ -41,6 +42,7 @@ export class VehicleManagementFormComponent implements OnInit {
       this.fGeneralSate.setValue(formData.fGeneralSate);
       this.fElectricSystem.setValue(formData.fElectricSystem);
       this.fSafetyAccessories.setValue(formData.fSafetyAccessories);
+      this.fInspectionData.setValue(formData.fInspectionData);
     }
   }
 
@@ -55,7 +57,8 @@ export class VehicleManagementFormComponent implements OnInit {
       fGeneralContition: this.fGeneralContition.value,
       fGeneralSate: this.fGeneralSate.value,
       fElectricSystem: this.fElectricSystem.value,
-      fSafetyAccessories: this.fSafetyAccessories.value
+      fSafetyAccessories: this.fSafetyAccessories.value,
+      fInspectionData: this.fInspectionData.value
     };
 
     localStorage.setItem('formData', JSON.stringify(formData));

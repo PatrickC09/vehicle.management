@@ -97,6 +97,18 @@ export interface ISafetyAccessories {
     rollbarInternalCage?: string;
     reflectiveTapes?: string;
 }
+
+export interface IInspectionData {
+    teamReport?: string;
+    inspectorName?: string;
+    approverName?: string;
+    inspectorCargo?: string;
+    approverCargo?: string;
+    inspectorFirmaI?: string;
+    approverFirma?: string;
+    inspectorDate?: string;
+    approverDate?: string;
+}
 export interface IGeneralContidionFormGroup extends FormGroup {
     value: IGeneralContidion;
     controls: {
@@ -196,6 +208,21 @@ export interface ISafetyAccessoriesFormGroup extends FormGroup {
         exhaustPipe: FormControl<string>
         rollbarInternalCage: FormControl<string>
         reflectiveTapes: FormControl<string>
+    }
+}
+
+export interface IInspectionDataFormGroup extends FormGroup {
+    value: IInspectionData;
+    controls: {
+        teamReport: FormControl<string>
+        inspectorName: FormControl<string>
+        approverName: FormControl<string>
+        inspectorCargo: FormControl<string>
+        approverCargo: FormControl<string>
+        inspectorFirmaI: FormControl<string>
+        approverFirma: FormControl<string>
+        inspectorDate: FormControl<string>
+        approverDate: FormControl<string>
     }
 }
 

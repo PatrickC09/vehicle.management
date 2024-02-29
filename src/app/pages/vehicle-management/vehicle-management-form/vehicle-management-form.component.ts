@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IElectricSystemFormGroup, IGeneralContidionFormGroup, IGeneralStateFormGroup, IMechanicFormGroup, ISafetyAccessoriesFormGroup, IVehicleFormGroup, selectOptionsOfStates } from '../../../interfaces/app/vehicle';
+import { IElectricSystem, IElectricSystemFormGroup, IGeneralContidionFormGroup, IGeneralStateFormGroup, IMechanicFormGroup, ISafetyAccessoriesFormGroup, IVehicleFormGroup, selectOptionsOfStates } from '../../../interfaces/app/vehicle';
 import { FormsService } from '../../../services/forms.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vehicle-management-form',
@@ -22,8 +23,9 @@ export class VehicleManagementFormComponent implements OnInit {
   selectedOption: string[] = [];
 
   constructor(
-    private formService: FormsService
-  ) { 
+    private formService: FormsService,
+    private router: Router
+  ) {
     this.selectedOption = new Array(this.selectOptions.length).fill('');
   }
 
@@ -31,7 +33,7 @@ export class VehicleManagementFormComponent implements OnInit {
 
     const saveData = localStorage.getItem('formData');
 
-    if (saveData){
+    if (saveData) {
       const formData = JSON.parse(saveData);
       this.fVehicle.setValue(formData.fVehicle);
       this.fMechanic.setValue(formData.fMechanic);
@@ -46,7 +48,7 @@ export class VehicleManagementFormComponent implements OnInit {
    * fuction to save vehicle form
    */
   saveVehicleForm(): void {
-    
+
     const formData = {
       fVehicle: this.fVehicle.value,
       fMechanic: this.fMechanic.value,
@@ -59,6 +61,13 @@ export class VehicleManagementFormComponent implements OnInit {
     localStorage.setItem('formData', JSON.stringify(formData));
 
     console.log('Data saved successfully!');
+
+    // Obtener la placa del vehículo del formulario
+    const placa = formData.fVehicle.vechiclePlaca;
+
+    // navegar al resumen
+    this.router.navigate(['/vehicle-management/resume-vehicle', placa]);
+    console.log(placa)
 
   }
 

@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { VehicleManagementRoutingModule } from './vehicle-management-routing.module';
 import { VehicleManagementFormComponent } from './vehicle-management-form/vehicle-management-form.component';
 import { PageModule } from 'src/app/modules/page.module';
+import { VehicleManagementResumeComponent } from './vehicle-management-resume/vehicle-management-resume.component';
 
 
 @NgModule({
   declarations: [
     VehicleManagementFormComponent,
+    VehicleManagementResumeComponent
   ],
   imports: [
     CommonModule,

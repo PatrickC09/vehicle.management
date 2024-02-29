@@ -33,12 +33,12 @@ export class VehicleManagementFormComponent implements OnInit {
 
     if (saveData){
       const formData = JSON.parse(saveData);
-      this.fVehicle.setValue(formData.vehicle);
-      this.fMechanic.setValue(formData.mechanic);
-      this.fGeneralContition.setValue(formData.generalCondition);
-      this.fGeneralSate.setValue(formData.generalState);
-      this.fElectricSystem.setValue(formData.electricSystem);
-      this.fSafetyAccessories.setValue(formData.safetyAccessories);
+      this.fVehicle.setValue(formData.fVehicle);
+      this.fMechanic.setValue(formData.fMechanic);
+      this.fGeneralContition.setValue(formData.fGeneralContition);
+      this.fGeneralSate.setValue(formData.fGeneralSate);
+      this.fElectricSystem.setValue(formData.fElectricSystem);
+      this.fSafetyAccessories.setValue(formData.fSafetyAccessories);
     }
   }
 
@@ -63,7 +63,6 @@ export class VehicleManagementFormComponent implements OnInit {
   }
 
   onSelectionChange(event: any, index: number) {
-    console.log("Index:", index)
     this.selectedOption[index] = event.target.value;
   }
 

@@ -178,7 +178,7 @@
                                                 </select>
                                             </c-col>
                                             <c-col>
-                                                <input cFormControl type="text" [value]="selectedOption[0]" readonly>
+                                                <input cFormControl type="text" [value]="selectedOption[0]" readonly formControlName="typeLicense">
                                             </c-col>
                                         </c-row>
                                         <!-- segunda fila -->
@@ -198,7 +198,7 @@
                                                 </select>
                                             </c-col>
                                             <c-col>
-                                                <input cFormControl type="text" [value]="selectedOption[1]" readonly>
+                                                <input cFormControl type="text" [value]="selectedOption[1]" readonly formControlName="tuition">
                                             </c-col>
                                         </c-row>
                                         <!-- Segunda fila -->
@@ -218,7 +218,7 @@
                                                 </select>
                                             </c-col>
                                             <c-col>
-                                                <input cFormControl type="text" [value]="selectedOption[2]" readonly>
+                                                <input cFormControl type="text" [value]="selectedOption[2]" readonly formControlName="defensiveDrivingCourse">
                                             </c-col>
                                         </c-row>
                                     </form>

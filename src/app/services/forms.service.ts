@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IGeneralContidion, IGeneralContidionFormGroup, IGeneralState, IGeneralStateFormGroup, IMechanic, IMechanicFormGroup, IVehicle, IVehicleFormGroup } from '../interfaces/app/vehicle';
+import { IElectricSystem, IElectricSystemFormGroup, IGeneralContidion, IGeneralContidionFormGroup, IGeneralState, IGeneralStateFormGroup, IMechanic, IMechanicFormGroup, IVehicle, IVehicleFormGroup } from '../interfaces/app/vehicle';
 import { FormBuilder } from '@angular/forms';
 
 @Injectable({
@@ -84,5 +84,25 @@ export class FormsService {
       valdes: [generalState?.valdes || '']
     }) as IGeneralStateFormGroup
   }
+
+  /**
+   * function to create electric system form
+   */
+  newFormElectricSystem(systemElectric?: IElectricSystem): IElectricSystemFormGroup {
+    return this.fb.group({
+      dashboard: [systemElectric?.dashboard || ''],
+      frontLightIntense: [systemElectric?.frontLightIntense || ''],
+      turnSignals: [systemElectric?.turnSignals || ''],
+      brakeLights: [systemElectric?.brakeLights || ''],
+      retroLights: [systemElectric?.retroLights || ''],
+      retroAlarm: [systemElectric?.retroAlarm || ''],
+      InteriorLight: [systemElectric?.InteriorLight || ''],
+      parkingLights: [systemElectric?.parkingLights || ''],
+      whistle: [systemElectric?.whistle || ''],
+      siren: [systemElectric?.siren || ''],
+      blender: [systemElectric?.blender || '']
+    }) as IElectricSystemFormGroup
+  }
+
 }
 

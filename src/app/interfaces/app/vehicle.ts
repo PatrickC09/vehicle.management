@@ -64,6 +64,20 @@ export interface IGeneralState {
     doorLocks?: string;
     valdes?: string;
 }
+
+export interface IElectricSystem {
+    dashboard?: string;
+    frontLightIntense?: string;
+    turnSignals?: string;
+    brakeLights?: string;
+    retroLights?: string;
+    retroAlarm?: string;
+    InteriorLight?: string;
+    parkingLights?: string;
+    whistle?: string;
+    siren?: string;
+    blender?: string;
+}
 export interface IGeneralContidionFormGroup extends FormGroup {
     value: IGeneralContidion;
     controls: {
@@ -128,6 +142,23 @@ export interface IGeneralStateFormGroup extends FormGroup {
         mudguards: FormControl<string>
         doorLocks: FormControl<string>
         valdes: FormControl<string>
+    }
+}
+
+export interface IElectricSystemFormGroup extends FormGroup {
+    value: IElectricSystem;
+    controls: {
+        dashboard: FormControl<string>
+        frontLightIntense: FormControl<string>
+        turnSignals: FormControl<string>
+        brakeLights: FormControl<string>
+        retroLights: FormControl<string>
+        retroAlarm: FormControl<string>
+        InteriorLight: FormControl<string>
+        parkingLights: FormControl<string>
+        whistle: FormControl<string>
+        siren: FormControl<string>
+        blender: FormControl<string>
     }
 }
 

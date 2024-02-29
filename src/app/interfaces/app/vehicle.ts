@@ -22,6 +22,10 @@ export interface IVehicle {
     systemMechanic?: IMechanic;
     // general state
     generalState?: IGeneralState;
+    // electric system
+    electricSystem?: IElectricSystem;
+    // safety accessories
+    safetyAccessories?: ISafetyAccessories;
 }
 
 export interface IGeneralContidion {
@@ -77,6 +81,21 @@ export interface IElectricSystem {
     whistle?: string;
     siren?: string;
     blender?: string;
+}
+
+export interface ISafetyAccessories {
+    absorbentCloth?: string;
+    roadSafetyFlag?: string;
+    flashlight?: string;
+    safetyCones?: string;
+    firstAidKit?: string;
+    fireExtinguisher?: string;
+    wooden?: string;
+    toolBox?: string;
+    pole?: string;
+    exhaustPipe?: string;
+    rollbarInternalCage?: string;
+    reflectiveTapes?: string;
 }
 export interface IGeneralContidionFormGroup extends FormGroup {
     value: IGeneralContidion;
@@ -159,6 +178,24 @@ export interface IElectricSystemFormGroup extends FormGroup {
         whistle: FormControl<string>
         siren: FormControl<string>
         blender: FormControl<string>
+    }
+}
+
+export interface ISafetyAccessoriesFormGroup extends FormGroup {
+    value: ISafetyAccessories;
+    controls: {
+        absorbentCloth: FormControl<string>
+        roadSafetyFlag: FormControl<string>
+        flashlight: FormControl<string>
+        safetyCones: FormControl<string>
+        firstAidKit: FormControl<string>
+        fireExtinguisher: FormControl<string>
+        wooden: FormControl<string>
+        toolBox: FormControl<string>
+        pole: FormControl<string>
+        exhaustPipe: FormControl<string>
+        rollbarInternalCage: FormControl<string>
+        reflectiveTapes: FormControl<string>
     }
 }
 

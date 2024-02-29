@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IElectricSystem, IElectricSystemFormGroup, IGeneralContidion, IGeneralContidionFormGroup, IGeneralState, IGeneralStateFormGroup, IMechanic, IMechanicFormGroup, IVehicle, IVehicleFormGroup } from '../interfaces/app/vehicle';
+import { IElectricSystem, IElectricSystemFormGroup, IGeneralContidion, IGeneralContidionFormGroup, IGeneralState, IGeneralStateFormGroup, IMechanic, IMechanicFormGroup, ISafetyAccessories, ISafetyAccessoriesFormGroup, IVehicle, IVehicleFormGroup } from '../interfaces/app/vehicle';
 import { FormBuilder } from '@angular/forms';
 
 @Injectable({
@@ -102,6 +102,26 @@ export class FormsService {
       siren: [systemElectric?.siren || ''],
       blender: [systemElectric?.blender || '']
     }) as IElectricSystemFormGroup
+  }
+
+  /**
+   * function to create safety accesory form
+   */
+  newFormSafetyAccesory(safetyAccesory?: ISafetyAccessories): ISafetyAccessoriesFormGroup {
+    return this.fb.group({
+      absorbentCloth: [safetyAccesory?.absorbentCloth || ''],
+      roadSafetyFlag: [safetyAccesory?.roadSafetyFlag || ''],
+      flashlight: [safetyAccesory?.flashlight || ''],
+      safetyCones: [safetyAccesory?.safetyCones || ''],
+      firstAidKit: [safetyAccesory?.firstAidKit || ''],
+      fireExtinguisher: [safetyAccesory?.fireExtinguisher || ''],
+      wooden: [safetyAccesory?.wooden || ''],
+      toolBox: [safetyAccesory?.toolBox || ''],
+      pole: [safetyAccesory?.pole || ''],
+      exhaustPipe: [safetyAccesory?.exhaustPipe || ''],
+      rollbarInternalCage: [safetyAccesory?.rollbarInternalCage || ''],
+      reflectiveTapes: [safetyAccesory?.reflectiveTapes || '']
+    }) as ISafetyAccessoriesFormGroup
   }
 
 }

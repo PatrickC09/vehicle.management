@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IElectricSystemFormGroup, IGeneralContidionFormGroup, IGeneralStateFormGroup, IMechanicFormGroup, IVehicleFormGroup, selectOptionsOfStates } from '../../../interfaces/app/vehicle';
+import { IElectricSystemFormGroup, IGeneralContidionFormGroup, IGeneralStateFormGroup, IMechanicFormGroup, ISafetyAccessoriesFormGroup, IVehicleFormGroup, selectOptionsOfStates } from '../../../interfaces/app/vehicle';
 import { FormsService } from '../../../services/forms.service';
 
 @Component({
@@ -15,6 +15,7 @@ export class VehicleManagementFormComponent implements OnInit {
   fGeneralContition: IGeneralContidionFormGroup = this.formService.newFormGeneralCondition();
   fGeneralSate: IGeneralStateFormGroup = this.formService.newFormGeneralState();
   fElectricSystem: IElectricSystemFormGroup = this.formService.newFormElectricSystem();
+  fSafetyAccessories: ISafetyAccessoriesFormGroup = this.formService.newFormSafetyAccesory();
 
   // select options
   selectOptions = selectOptionsOfStates
@@ -39,6 +40,7 @@ export class VehicleManagementFormComponent implements OnInit {
     console.log(this.fMechanic.value);
     console.log(this.fGeneralSate.value);
     console.log('SISTEMA ELECTRICO',this.fElectricSystem.value);
+    console.log('ACCESORIOS DE SEGURIDAD',this.fSafetyAccessories.value);
   }
 
   onSelectionChange(event: any, index: number) {

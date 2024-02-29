@@ -37,4 +37,19 @@ export class VehicleManagementResumeComponent implements OnInit {
     });
   }
 
+  /**
+   * function to back to the previous page
+   */
+  back() {
+    window.history.back();
+  }
+
+  /**
+   * fuction to redirect to form page and empty the local storage
+   */
+  newForm() {
+    localStorage.removeItem('formData');
+    window.history.back();
+  }
+
 }

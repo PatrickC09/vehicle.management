@@ -118,6 +118,7 @@ import {
   cilReload,
   cilSearch,
   cilClipboard,
+  cilArrowLeft,
 } from '@coreui/icons';
 
 export const iconSubset = {
@@ -240,4 +241,5 @@ export const iconSubset = {
   cilReload,
   cilSearch,
   cilClipboard,
+  cilArrowLeft,
 };

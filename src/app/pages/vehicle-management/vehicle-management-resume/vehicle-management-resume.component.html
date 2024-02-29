@@ -4,7 +4,19 @@
         <c-card-header>
             <c-row class="text-center py-1">
                 <c-col>
+                    <button cButton color="warning" class="card-header-button-left" (click)="back()">
+                        <svg cIcon name="cil-arrow-left"></svg>
+                        <b> Seguir Editando</b>
+                    </button>
+                </c-col>
+                <c-col>
                     <label> <b>PLAN DE ACCIÓN DE INSPECCIÓNES </b></label>
+                </c-col>
+                <c-col>
+                    <button class="card-header-button-rigth" color="dark" cButton (click)="newForm()">
+                        <b> Nuevo Registro</b>
+                        <svg cIcon name="cil-arrow-right"></svg>
+                    </button>
                 </c-col>
             </c-row>
         </c-card-header>
@@ -88,7 +100,7 @@
                     </c-col>
                     <!-- fecha de cumplimiento -->
                     <c-col class="text-center">
-                       <label for="">28 ENERO</label> 
+                        <label for="">28 ENERO</label>
                     </c-col>
                     <!-- responsable -->
                     <c-col class="text-center">

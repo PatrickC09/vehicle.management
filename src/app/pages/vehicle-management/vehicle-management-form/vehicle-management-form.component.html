@@ -39,7 +39,7 @@
                                             <label cLabel class="text-info"> FECHA DE APROBACIÓN PROCEDIMIENTO
                                             </label> <br>
                                             <!-- escribir fecha -->
-                                            <input type="date">
+                                            <input cFormControl type="date">
                                         </c-col>
                                     </c-row> <br>
                                     <c-row class="d-flex justify-content-center text-center py-1">
@@ -168,7 +168,8 @@
                                                 <label cLabel> Licencia Tipo</label>
                                             </c-col>
                                             <c-col>
-                                                <select cSelect (change)="onSelectionChange($event,0)" formControlName="typeLicense">
+                                                <select cSelect (change)="onSelectionChange($event,0)"
+                                                    formControlName="typeLicense">
                                                     <option value=""> [Select] </option>
                                                     <option *ngFor="let item of selectOptions; let i = index"
                                                         [value]="item">
@@ -187,7 +188,8 @@
                                                 </label>
                                             </c-col>
                                             <c-col>
-                                                <select cSelect (change)="onSelectionChange($event,1)" formControlName="tuition">
+                                                <select cSelect (change)="onSelectionChange($event,1)"
+                                                    formControlName="tuition">
                                                     <option value=""> [Select] </option>
                                                     <option *ngFor="let item of selectOptions; let i = index"
                                                         [value]="item">
@@ -206,7 +208,8 @@
                                                 </label>
                                             </c-col>
                                             <c-col>
-                                                <select cSelect (change)="onSelectionChange($event,2)" formControlName="defensiveDrivingCourse">
+                                                <select cSelect (change)="onSelectionChange($event,2)"
+                                                    formControlName="defensiveDrivingCourse">
                                                     <option value=""> [Select] </option>
                                                     <option *ngFor="let item of selectOptions; let i = index"
                                                         [value]="item">
@@ -1306,8 +1309,7 @@
                                     <c-col>
                                         <select cSelect (change)="onSelectionChange($event,56)">
                                             <option value=""> [Select] </option>
-                                            <option *ngFor="let item of selectOptions; let i = index"
-                                                [value]="item">
+                                            <option *ngFor="let item of selectOptions; let i = index" [value]="item">
                                                 {{ item }}
                                             </option>
                                         </select>
@@ -1316,6 +1318,70 @@
                                         <input cFormControl type="text" [value]="selectedOption[56]" readonly>
                                     </c-col>
                                 </c-row>
+                            </c-card-body>
+                        </c-card> <br>
+                        <c-card>
+                            <c-card-header>
+                                <label> <b> DATOS </b></label>
+                            </c-card-header>
+                            <c-card-body>
+                                <c-container fluid>
+                                    <c-row class="text-center py-1">
+                                        <c-col>
+
+                                        </c-col>
+                                        <c-col>
+                                            <label> INSPECCIONADO POR: </label>
+                                        </c-col>
+                                        <c-col>
+                                            <label> APROBADO POR: </label>
+                                        </c-col>
+                                    </c-row> <br>
+                                    <c-row class="text-center py-1">
+                                        <c-col>
+                                            <label>NOMBRE</label>
+                                        </c-col>
+                                        <c-col>
+                                            <input cFormControl type="text">
+                                        </c-col>
+                                        <c-col>
+                                            <input cFormControl type="text">
+                                        </c-col>
+                                    </c-row> <br>
+                                    <c-row class="text-center py-1">
+                                        <c-col>
+                                            <label>CARGO</label>
+                                        </c-col>
+                                        <c-col>
+                                            <input cFormControl type="text">
+                                        </c-col>
+                                        <c-col>
+                                            <input cFormControl type="text">
+                                        </c-col>
+                                    </c-row> <br>
+                                    <c-row class="text-center py-1">
+                                        <c-col>
+                                            <label>FIRMA</label>
+                                        </c-col>
+                                        <c-col>
+                                            <input cFormControl type="text">
+                                        </c-col>
+                                        <c-col>
+                                            <input cFormControl type="text">
+                                        </c-col>
+                                    </c-row> <br>
+                                    <c-row class="text-center py-1">
+                                        <c-col>
+                                            <label>FECHA</label>
+                                        </c-col>
+                                        <c-col>
+                                            <input cFormControl type="date">
+                                        </c-col>
+                                        <c-col>
+                                            <input cFormControl type="date">
+                                        </c-col>
+                                    </c-row>
+                                </c-container>
                             </c-card-body>
                         </c-card> <br>
                         <c-card> <br>
@@ -1330,7 +1396,7 @@
                                     </c-col>
                                     <c-col md="4">
                                         <div class="d-grid">
-                                            <button cButton color="success" (click)="saveVehicle()">
+                                            <button cButton color="success" (click)="saveVehicleForm()">
                                                 Guardar
                                             </button>
                                         </div>

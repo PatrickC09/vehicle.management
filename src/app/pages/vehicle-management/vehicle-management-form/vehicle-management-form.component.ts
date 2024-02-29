@@ -29,18 +29,37 @@ export class VehicleManagementFormComponent implements OnInit {
 
   ngOnInit(): void {
 
+    const saveData = localStorage.getItem('formData');
+
+    if (saveData){
+      const formData = JSON.parse(saveData);
+      this.fVehicle.setValue(formData.vehicle);
+      this.fMechanic.setValue(formData.mechanic);
+      this.fGeneralContition.setValue(formData.generalCondition);
+      this.fGeneralSate.setValue(formData.generalState);
+      this.fElectricSystem.setValue(formData.electricSystem);
+      this.fSafetyAccessories.setValue(formData.safetyAccessories);
+    }
   }
 
   /**
    * fuction to save vehicle form
    */
-  saveVehicle(): void {
-    console.log(this.fVehicle.value);
-    console.log(this.fGeneralContition.value);
-    console.log(this.fMechanic.value);
-    console.log(this.fGeneralSate.value);
-    console.log('SISTEMA ELECTRICO',this.fElectricSystem.value);
-    console.log('ACCESORIOS DE SEGURIDAD',this.fSafetyAccessories.value);
+  saveVehicleForm(): void {
+    
+    const formData = {
+      fVehicle: this.fVehicle.value,
+      fMechanic: this.fMechanic.value,
+      fGeneralContition: this.fGeneralContition.value,
+      fGeneralSate: this.fGeneralSate.value,
+      fElectricSystem: this.fElectricSystem.value,
+      fSafetyAccessories: this.fSafetyAccessories.value
+    };
+
+    localStorage.setItem('formData', JSON.stringify(formData));
+
+    console.log('Data saved successfully!');
+
   }
 
   onSelectionChange(event: any, index: number) {

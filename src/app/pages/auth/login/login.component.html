@@ -1,0 +1,59 @@
+<div id="loginContainer" class="bg-light min-vh-100 d-flex flex-row align-items-center">
+    <c-container>
+        <c-row class="justify-content-center">
+            <c-col sm="8" md="7" xl="4">
+                <c-card-group>
+                    <c-card class="p-4">
+                        <c-card-body>
+                            <h6 class="text-center py-2">BIENVENIDOS A LA PLATAFORMA</h6>
+                            <img cImg id="logo" src="assets/logos/logo-empre-1.png" alt="">
+
+                            <form cForm>
+                                <p class="text-medium-emphasis text-center">
+                                    Ingrese sus credenciales, por favor
+                                </p>
+                                <c-input-group class="mb-3">
+                                    <span cInputGroupText>
+                                        <svg cIcon name="cilUser"></svg>
+                                    </span>
+                                    <input cFormControl type="text" placeholder="Usuario" autocomplete="on" />
+                                </c-input-group>
+                                <c-input-group class="mb-4">
+                                    <span cInputGroupText>
+                                        <svg cIcon name="cilLockLocked"></svg>
+                                    </span>
+                                    <input cFormControl placeholder="Contraseña" autocomplete="" />
+                                    <button cButton size="sm" color="dark" class="p-0"
+                                        (click)="showPassword = !showPassword" variant="outline">
+                                        <mat-icon *ngIf="showPassword">
+                                            <svg cIcon name="cil-vision"></svg>
+                                        </mat-icon>
+                                        <mat-icon *ngIf="!showPassword">
+                                            <svg cIcon name="cil-low-vision"></svg>
+                                        </mat-icon>
+                                    </button>
+                                </c-input-group>
+                                <c-row class="justify-content-center">
+                                    <c-col class="d-grid" xs="6">
+                                      <button cButton class="px-4" color="success" variant="outline" (click)="login()">
+                                        Login
+                                      </button>
+                                    </c-col>
+                                  </c-row>
+                                  <c-row>
+                                    <c-col class="text-center py-2">
+                                      <label for="">¿No tienes cuenta? </label>
+                                      <a class="aling-item-center" href="#/auth/register"> Regístrate</a>
+                                    </c-col>
+                                  </c-row>
+                            </form>
+                        </c-card-body>
+                        <c-card-footer class="text-end">
+                            <a>¿Olvidó su contraseña?</a>
+                          </c-card-footer>
+                    </c-card>
+                </c-card-group>
+            </c-col>
+        </c-row>
+    </c-container>
+</div>

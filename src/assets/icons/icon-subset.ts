@@ -119,6 +119,7 @@ import {
   cilSearch,
   cilClipboard,
   cilArrowLeft,
+  cilLowVision
 } from '@coreui/icons';
 
 export const iconSubset = {
@@ -242,4 +243,5 @@ export const iconSubset = {
   cilSearch,
   cilClipboard,
   cilArrowLeft,
+  cilLowVision,
 };

@@ -5,12 +5,14 @@ import { VehicleManagementRoutingModule } from './vehicle-management-routing.mod
 import { VehicleManagementFormComponent } from './vehicle-management-form/vehicle-management-form.component';
 import { PageModule } from 'src/app/modules/page.module';
 import { VehicleManagementResumeComponent } from './vehicle-management-resume/vehicle-management-resume.component';
+import { VehicleManagementListComponent } from './vehicle-management-list/vehicle-management-list.component';
 
 
 @NgModule({
   declarations: [
     VehicleManagementFormComponent,
-    VehicleManagementResumeComponent
+    VehicleManagementResumeComponent,
+    VehicleManagementListComponent
   ],
   imports: [
     CommonModule,

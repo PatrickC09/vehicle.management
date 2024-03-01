@@ -18,7 +18,7 @@ export class LoginComponent {
    * create to function rediect to vehicle-management-form
    */
   login() {
-    this.router.navigate(['/vehicle-management/register'])
+    this.router.navigate(['/vehicle-management/list'])
   }
 
 }

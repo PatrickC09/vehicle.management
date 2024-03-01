@@ -13,10 +13,22 @@
                     <label> <b>PLAN DE ACCIÓN DE INSPECCIONES </b></label>
                 </c-col>
                 <c-col>
-                    <button class="card-header-button-rigth" color="dark" cButton (click)="newForm()">
-                        <b> Nuevo Registro</b>
-                        <svg cIcon name="cil-arrow-right"></svg>
-                    </button>
+                    <c-dropdown class="card-header-button-rigth">
+                        <button cButton cDropdownToggle color="warning">
+                            Acciones
+                        </button>
+                        <div cDropdownMenu>
+                            <button cDropdownItem class="py-0">
+                                Exportar a Excel
+                                <svg cIcon name="cilCloudDownload"></svg>
+                            </button>
+                            <hr cDropdownDivider>
+                            <button cDropdownItem class="py-0" (click)="newForm()">
+                                 Nuevo Registro
+                                <svg cIcon name="cil-arrow-right"></svg>
+                            </button>
+                        </div>
+                    </c-dropdown>
                 </c-col>
             </c-row>
         </c-card-header>

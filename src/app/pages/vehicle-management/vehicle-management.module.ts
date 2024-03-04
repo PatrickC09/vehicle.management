@@ -6,13 +6,15 @@ import { VehicleManagementFormComponent } from './vehicle-management-form/vehicl
 import { PageModule } from 'src/app/modules/page.module';
 import { VehicleManagementResumeComponent } from './vehicle-management-resume/vehicle-management-resume.component';
 import { VehicleManagementListComponent } from './vehicle-management-list/vehicle-management-list.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     VehicleManagementFormComponent,
     VehicleManagementResumeComponent,
-    VehicleManagementListComponent
+    VehicleManagementListComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,

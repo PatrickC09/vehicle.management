@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { VehicleManagementFormComponent } from './vehicle-management-form/vehicle-management-form.component';
 import { VehicleManagementResumeComponent } from './vehicle-management-resume/vehicle-management-resume.component';
 import { VehicleManagementListComponent } from './vehicle-management-list/vehicle-management-list.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,13 @@ const routes: Routes = [
         component: VehicleManagementListComponent,
         data: {
           title: 'Lista de Vehículos'
+        }
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+        data: {
+          title: 'Dashboard'
         }
       }
     ]

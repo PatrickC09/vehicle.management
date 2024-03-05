@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Exporter } from 'src/app/helpers/pdf-exporter';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,6 +11,9 @@ export class DashboardComponent implements OnInit {
 
   formData: any
   filteredData: any;
+
+  // variables export
+  isPrinting = false;
 
   constructor(
     private route: ActivatedRoute
@@ -32,6 +36,19 @@ export class DashboardComponent implements OnInit {
         }
       }
     });
+  }
+
+  /**
+   * function to export dashboard to pdf
+   */
+  async exportToPdf() {
+
+    this.isPrinting = true;
+
+    await Exporter.exportHtmlElementToPDF(document.getElementById('dashboard'), 'dashboard.pdf')
+
+    this.isPrinting = false;
+
   }
 
 }

@@ -1,5 +1,5 @@
 <br>
-<c-container fluid>
+<c-container fluid id="vehicle-form">
     <c-card>
         <c-card-header>
             <c-row class="text-center py-1">
@@ -14,20 +14,12 @@
                 </c-col>
                 <c-col>
                     <c-dropdown class="card-header-button-rigth">
-                        <button cButton cDropdownToggle color="warning">
-                            Acciones
+                        <button cButton color="warning" (click)="exportToPdf()" (click)="exportToPdf();"
+                            [disabled]="isPrinting">
+                            <div class="lkme-loading-ring" *ngIf="isPrinting"></div>
+                            <svg cIcon name="cil-print" *ngIf="!isPrinting"></svg>
+                            <b> Exportar PDF </b>
                         </button>
-                        <div cDropdownMenu>
-                            <button cDropdownItem class="py-0">
-                                Exportar a Excel
-                                <svg cIcon name="cilCloudDownload"></svg>
-                            </button>
-                            <hr cDropdownDivider>
-                            <button cDropdownItem class="py-0" (click)="newForm()">
-                                 Nuevo Registro
-                                <svg cIcon name="cil-arrow-right"></svg>
-                            </button>
-                        </div>
                     </c-dropdown>
                 </c-col>
             </c-row>
@@ -136,5 +128,9 @@
                 </c-row>
             </div>
         </c-card-body>
-    </c-card>
+    </c-card> <br>
+    <button cButton color="success" class="button-footer" (click)="navigateDashboard()">
+        <b>SIGUIENTE </b>
+        <svg cIcon name="cil-arrow-right"></svg>
+    </button>
 </c-container>

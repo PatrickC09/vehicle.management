@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Exporter } from 'src/app/helpers/pdf-exporter';
 import { IVehicle } from 'src/app/interfaces/app/vehicle';
 
 @Component({
@@ -14,8 +15,12 @@ export class VehicleManagementResumeComponent implements OnInit {
   formData: any;
   filteredData: any;
 
+  // variables export
+  isPrinting = false;
+
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -50,6 +55,26 @@ export class VehicleManagementResumeComponent implements OnInit {
   newForm() {
     localStorage.removeItem('formData');
     window.history.back();
+  }
+
+  /**
+   * function navigate dashboard
+   */
+  navigateDashboard() {
+    this.router.navigate(['/vehicle-management/dashboard']);
+  }
+
+   /**
+   * function to export dashboard to pdf
+   */
+   async exportToPdf() {
+
+    this.isPrinting = true;
+
+    await Exporter.exportHtmlElementToPDF(document.getElementById('vehicle-form'), 'vehicle-form.pdf')
+
+    this.isPrinting = false;
+
   }
 
 }

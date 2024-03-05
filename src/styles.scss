@@ -1,3 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
 @import "@coreui/coreui/scss/coreui";
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+/// ***********************
+/// Animations
+/// ***********************
+
+.lkme-loading-ring {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .lkme-loading-ring:after {
+    content: " ";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    margin: 1px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lkme-loading-ring 1.2s linear infinite;
+  }
+  @keyframes lkme-loading-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+  .lkme-card-header-button {
+    // Comportamiento
+    position: absolute;
+    // Posición
+    right:33rem;
+    // align-self: center !important;
+    top: 2rem;
+  }

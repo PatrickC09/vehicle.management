@@ -4,7 +4,7 @@
         <c-col md="12" class="py-2">
             <h2 cCardTitle class="text-info">
                 DASHBOARD
-            </h2> 
+            </h2>
         </c-col>
         <c-col>
             <button cButton slot="end" color="secondary" class="lkme-card-header-button lkme-icon-btn me-3"
@@ -83,8 +83,25 @@
                         </c-card-body>
                     </c-container>
                 </c-card-body>
+            </c-card> <br>
+            <c-card>
+                <c-card-body>
+                    <c-container fluid>
+                        <c-row>
+                            <c-col md="6" class="border-end">
+                                <p cCardText class="fw-semibold">
+                                    Nuevo Vehiculo <br>
+                                </p>
+                            </c-col>
+                            <c-col md="6" class="border-start" *ngIf="formData">
+                                <button cButton color="warning" id="letter-button" (click)="newForm()">
+                                    <b> Nuevo Vehiculo </b>
+                                </button>
+                            </c-col>
+                        </c-row>
+                    </c-container>
+                </c-card-body>
             </c-card>
         </c-col>
     </c-row>
 </c-container>
-r

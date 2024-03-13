@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Exporter } from 'src/app/helpers/pdf-exporter';
 
 @Component({
@@ -16,7 +16,8 @@ export class DashboardComponent implements OnInit {
   isPrinting = false;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -49,6 +50,11 @@ export class DashboardComponent implements OnInit {
 
     this.isPrinting = false;
 
+  }
+
+  newForm() {
+    localStorage.removeItem('formData');
+    this.router.navigate(['/vehicle-management/list']);
   }
 
 }

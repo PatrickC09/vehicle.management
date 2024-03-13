@@ -1,0 +1,21 @@
+version: "3"
+
+networks:
+  nginx_net:
+    external: true
+
+services:
+  # # # Web Portal
+  webportalvehiclamanagement-svc:
+    container_name: webportalvehiclamanagement-svc
+    image: nginx
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - "VIRTUAL_HOST=${LETS_HOST_PORTAL}"
+      - "LETSENCRYPT_HOST=${LETS_HOST_PORTAL}"
+    env_file:
+      - .env
+    networks:
+      - nginx_net

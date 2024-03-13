@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { AlertModule } from '@coreui/angular';
+import { AlertModule, BadgeModule, GridModule } from '@coreui/angular';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -16,7 +16,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     AlertModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    GridModule,
+    BadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

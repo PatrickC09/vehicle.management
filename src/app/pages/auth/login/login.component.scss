@@ -1,0 +1,24 @@
+#loginContainer {
+    #logo {
+      width: 100%;
+      height: auto;
+    }
+  
+    c-card-header {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+  
+    c-card-body {
+      margin-bottom: 4rem;
+    }
+  
+    a {
+      text-decoration: none;
+      color: darkgray;
+      &:hover {
+        text-decoration: underline;
+        color: var(--lkme-color-red);
+      }
+    }
+  }

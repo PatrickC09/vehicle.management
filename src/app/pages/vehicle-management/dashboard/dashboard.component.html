@@ -1,0 +1,107 @@
+<br>
+<c-container fluid id="dashboard" class="justify-content-center">
+    <c-row class="px-2">
+        <c-col md="12" class="py-2">
+            <h2 cCardTitle class="text-info">
+                DASHBOARD
+            </h2>
+        </c-col>
+        <c-col>
+            <button cButton slot="end" color="secondary" class="lkme-card-header-button lkme-icon-btn me-3"
+                (click)="exportToPdf();" [disabled]="isPrinting">
+                <div class="lkme-loading-ring" *ngIf="isPrinting"></div>
+                <svg cIcon name="cil-print" *ngIf="!isPrinting"></svg>
+            </button>
+        </c-col>
+    </c-row>
+    <c-row>
+        <c-col lg="8">
+            <c-card>
+                <c-card-body>
+                    <c-container fluid>
+                        <c-row>
+                            <c-col md="6" class="border-end">
+                                <p cCardText class="fw-semibold">
+                                    Placa: <br>
+                                    Marca: <br>
+                                    Combustible: <br>
+                                    Modelo: <br>
+                                    Conductor: <br>
+                                    Color: <br>
+                                    Kilometraje: <br>
+                                </p>
+                            </c-col>
+                            <c-col md="6" class="border-start" *ngIf="formData">
+                                <p cCardText class="text-secondary fst-italic">
+                                    {{ formData.fVehicle.vechiclePlaca }} <br>
+                                    {{ formData.fVehicle.vehicleBrand}} <br>
+                                    {{ formData.fVehicle.vehicleConbustible }} <br>
+                                    {{ formData.fVehicle.vehicleModel}} <br>
+                                    {{ formData.fVehicle.vehicleConductor}} <br>
+                                    {{ formData.fVehicle.vehicleColor}} <br>
+                                    {{ formData.fVehicle.vehicleKilometraje}} km <br>
+                                </p>
+                            </c-col>
+                        </c-row>
+                        <hr>
+                        <c-card-body>
+                            <!-- data final de aprobado o rechazado -->
+                            <c-row>
+                                <c-col md="6" class="border-end">
+                                    <p cCardText class="fw-semibold">
+                                        Fecha de aprobación: <br>
+                                        Fecha de inspección: <br>
+                                    </p>
+                                </c-col>
+                                <c-col md="6" class="border-start" *ngIf="formData">
+                                    <p cCardText class="text-secondary fst-italic">
+                                        {{ formData.fInspectionData.approverDate}} <br>
+                                        {{ formData.fInspectionData.inspectorDate}} <br>
+                                    </p>
+                                </c-col>
+                            </c-row>
+                        </c-card-body>
+                        <hr>
+                        <!-- estado -->
+                        <c-card-body>
+                            <c-row>
+                                <c-col md="6" class="border-end">
+                                    <p cCardText class="fw-semibold">
+                                        Estado: <br>
+                                    </p>
+                                </c-col>
+                                <c-col md="6" class="border-start" *ngIf="formData">
+                                    <p cCardText class="text-secondary fst-italic">
+                                        <c-badge
+                                            [color]="formData.fInspectionData.teamReport === 'Operativo' ? 'success' : 'danger'"
+                                            shape="rounded-pill">
+                                            {{ formData.fInspectionData.teamReport}} <br>
+                                        </c-badge>
+                                    </p>
+                                </c-col>
+                            </c-row>
+                        </c-card-body>
+                    </c-container>
+                </c-card-body>
+            </c-card> <br>
+            <c-card>
+                <c-card-body>
+                    <c-container fluid>
+                        <c-row>
+                            <c-col md="6" class="border-end">
+                                <p cCardText class="fw-semibold">
+                                    Nuevo Vehiculo <br>
+                                </p>
+                            </c-col>
+                            <c-col md="6" class="border-start" *ngIf="formData">
+                                <button cButton color="warning" id="letter-button" (click)="newForm()">
+                                    <b> Nuevo Vehiculo </b>
+                                </button>
+                            </c-col>
+                        </c-row>
+                    </c-container>
+                </c-card-body>
+            </c-card>
+        </c-col>
+    </c-row>
+</c-container>

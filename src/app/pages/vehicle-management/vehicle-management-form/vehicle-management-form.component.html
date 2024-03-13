@@ -1,0 +1,1484 @@
+<br> <br>
+<c-container>
+    <c-card id="cardVehicle">
+        <c-card-header>
+            <h5>Registro de Inspección - Vehiculo - <b>Liviano</b></h5>
+        </c-card-header>
+        <c-card-body>
+            <c-container fluid>
+                <c-row class="text-center py-1">
+                    <c-col>
+                        <c-card>
+                            <c-card-header>
+                                <label>
+                                    <b>INFORMACION DE EMPRESA</b>
+                                </label>
+                            </c-card-header>
+                            <c-card-body class="p-1">
+                                <c-container>
+                                    <c-row class="d-flex justify-content-between text-center py-1">
+                                        <c-col md="4">
+                                            <label cLabel class="title"> <b> LOGO DE LA EMPRESA </b></label> <br>
+                                            <img src="assets/logos/logo-empre-1.png" alt="src" width="200" height="100">
+                                        </c-col>
+                                        <c-col md="4">
+                                            <label cLabel class="title"> <b> NOMBRE DE LA EMPRESA </b></label> <br>
+                                            <label cLabel>FERLATCHECK SOFTWARE</label>
+                                        </c-col>
+                                        <c-col md="4">
+                                            <label cLabel class="title"> <b> CÓDIGO DE CHECK LIST # </b></label> <br>
+                                            <label cLabel>#150908</label>
+                                        </c-col>
+                                    </c-row>
+                                    <c-row class="d-flex justify-content-center text-center py-1">
+                                        <c-col>
+
+                                        </c-col>
+                                        <c-col md="4">
+                                            <!-- <label cLabel class="text-info"> Nombre de la Empresa</label> <br> -->
+                                            <label cLabel>UNIDAD DE CONTROL</label>
+                                        </c-col>
+                                        <c-col md="4">
+                                            <label cLabel class="title"> <b> FECHA DE APROBACIÓN PROCEDIMIENTO </b>
+                                            </label> <br>
+                                            <!-- escribir fecha -->
+                                            <input cFormControl type="date">
+                                        </c-col>
+                                    </c-row> <br>
+                                    <c-row class="d-flex justify-content-center text-center py-1">
+                                        <c-col>
+
+                                        </c-col>
+                                        <c-col md="4">
+                                            <label cLabel>NOMBRE DEL PROCEDIMIENTO</label>
+                                        </c-col>
+                                        <c-col md="4">
+                                            <label cLabel>PAGINA 1 DE 1</label>
+                                        </c-col>
+                                    </c-row>
+                                </c-container>
+                            </c-card-body>
+                        </c-card>
+                        <br>
+                        <c-card>
+                            <c-card-header>
+                                <label for=""><b> DATOS GENERALES</b></label>
+                            </c-card-header>
+                            <c-card-body>
+                                <form [formGroup]="fVehicle">
+                                    <c-container fluid>
+                                        <!-- TEST -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> VEHICULO TIPO</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="vehicleType">
+                                            </c-col>
+                                            <c-col>
+                                                <label cLabel> PLACA</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="vechiclePlaca">
+                                            </c-col>
+                                        </c-row> <br>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> MARCA</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="vehicleBrand">
+                                            </c-col>
+                                            <c-col>
+                                                <label cLabel> COMBUSTIBLE</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="vehicleConbustible">
+                                            </c-col>
+                                        </c-row> <br>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> MODELO</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="vehicleModel">
+                                            </c-col>
+                                            <c-col>
+                                                <label cLabel> CONDUCTOR</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="vehicleConductor">
+                                            </c-col>
+                                        </c-row> <br>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> COLOR</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="vehicleColor">
+                                            </c-col>
+                                            <c-col>
+                                                <label cLabel> KILOMETRAJE</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="vehicleKilometraje">
+                                            </c-col>
+                                        </c-row> <br>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> N° DE MOTOR</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="vehicleNumberMotor">
+                                            </c-col>
+                                            <c-col>
+                                                <label cLabel> N° DE SERIE</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="numberSerie">
+                                            </c-col>
+                                        </c-row> <br>
+                                    </c-container>
+                                </form>
+                            </c-card-body>
+                        </c-card> <br>
+                        <c-card>
+                            <c-card-header>
+                                <c-row>
+                                    <c-col>
+                                        <label><b>DETALLE</b></label>
+                                    </c-col>
+                                    <c-col>
+                                        <label><b>ESTADO</b></label>
+                                    </c-col>
+                                    <c-col>
+                                        <label><b>NOVEDADES</b></label>
+                                    </c-col>
+                                </c-row>
+                            </c-card-header> <br>
+                            <c-card-header>
+                                <c-row>
+                                    <c-col>
+                                        <label>CONDICIONES GENERALES</label>
+                                    </c-col>
+                                </c-row>
+                            </c-card-header>
+                            <c-card-body>
+                                <c-container fluid>
+                                    <form [formGroup]="fGeneralContition">
+
+
+                                        <!-- primera fila -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LICENCIA TIPO</label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,0)"
+                                                    formControlName="typeLicense">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[0]" readonly
+                                                    formControlName="typeLicense">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- segunda fila -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> MATRICULA ACTUALIZADA DEL VEHICULO
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,1)"
+                                                    formControlName="tuition">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[1]" readonly
+                                                    formControlName="tuition">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- Segunda fila -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> CURSO MANEJO DEFENSIVO
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,2)"
+                                                    formControlName="defensiveDrivingCourse">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[2]" readonly
+                                                    formControlName="defensiveDrivingCourse">
+                                            </c-col>
+                                        </c-row>
+                                    </form>
+                                </c-container>
+                            </c-card-body>
+                            <c-card-header>
+                                <c-row>
+                                    <c-col>
+                                        <label>SISTEMA MECANICO</label>
+                                    </c-col>
+                                </c-row>
+                            </c-card-header>
+                            <c-card-body>
+                                <c-container fluid>
+                                    <form [formGroup]="fMechanic">
+                                        <!-- Bateria -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> BATERIA
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,3)"
+                                                    formControlName="battery">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[3]" readonly formControlName="battery">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- Arranque -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> ARRAQUE
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,4)"
+                                                    formControlName="starter">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[4]" readonly
+                                                    formControlName="starter">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- Freno de mano -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> FRENO DE MANO
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,5)"
+                                                    formControlName="handBrake">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[5]" readonly
+                                                    formControlName="handBrake">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- Freno de marcha -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> FRENO DE MARCHA
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,6)"
+                                                    formControlName="runningBrake">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[6]" readonly
+                                                    formControlName="runningBrake">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- llantas -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LLANTAS (labrado menor a 0,5mm)
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,7)"
+                                                    formControlName="tires">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[7]" readonly
+                                                    formControlName="tires">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- llanta de emergencia -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LLANTA DE EMERGENCIA
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,8)"
+                                                    formControlName="emergencyTire">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[8]" readonly
+                                                    formControlName="emergencyTire">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- vidrios -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> VIDRIOS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,9)"
+                                                    formControlName="glasses">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[9]" readonly
+                                                    formControlName="glasses">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- espejos -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> ESPEJOS LATERALES / ESPEJO RETROVISOR
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,10)"
+                                                    formControlName="sideMirrors">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[10]" readonly
+                                                    formControlName="sideMirrors">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- asientos -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> ASIENTOS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,11)"
+                                                    formControlName="seating">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[11]" readonly
+                                                    formControlName="seating">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- apoyacabezas -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> APOYACABEZAS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,12)"
+                                                    formControlName="belts">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[12]" readonly
+                                                    formControlName="belts">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- cinturones -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> CINTURONES
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,13)"
+                                                    formControlName="windshieldWiper">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[13]" readonly
+                                                    formControlName="windshieldWiper">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- limpia parabrisas -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LIMPIA PARABRISAS Y PLUMAS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,14)"
+                                                    formControlName="engineBelt">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[14]" readonly
+                                                    formControlName="engineBelt">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- correa de motor -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> CORREA DE MOTOR
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,15)"
+                                                    formControlName="engineCables">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[15]" readonly
+                                                    formControlName="engineCables">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- cables de motor -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> CABLES DE MOTOR
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,16)"
+                                                    formControlName="engineOil">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[16]" readonly
+                                                    formControlName="engineOil">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- aceite de motor -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> ACEITE DE MOTOR
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,17)"
+                                                    formControlName="radiatorWater">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[17]" readonly
+                                                    formControlName="radiatorWater">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- agua radiador -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> AGUA RADIADOR
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,18)"
+                                                    formControlName="brakeFluid">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[18]" readonly
+                                                    formControlName="brakeFluid">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- luquido de frenos -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LIQUIDO DE FRENIS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,19)"
+                                                    formControlName="steering">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[19]" readonly
+                                                    formControlName="steering">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- volante -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> VOLANTE (DIRECCIÓN)
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,20)"
+                                                    formControlName="clutch">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[20]" readonly
+                                                    formControlName="clutch">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- ambrague -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> EMBRAGUE / SINCRONIZADO
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,21)"
+                                                    formControlName="clutch">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[21]" readonly
+                                                    formControlName="clutch">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- suspension -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> SUSPENSION (VISUAL)
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,22)"
+                                                    formControlName="suspension">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[22]" readonly
+                                                    formControlName="suspension">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- lubricacion grases -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LUBRICACIÓN GRASERAS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,23)"
+                                                    formControlName="lubricationOfGrease">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[23]" readonly
+                                                    formControlName="lubricationOfGrease">
+                                            </c-col>
+                                        </c-row>
+                                        <!-- no tiene loquidos -->
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> NO TIENE LIQUIDIDOS / COMBUSTIBLE, ACEITE
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,24)"
+                                                    formControlName="liquefies">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[24]" readonly
+                                                    formControlName="liquefies">
+                                            </c-col>
+                                        </c-row>
+                                    </form>
+                                </c-container>
+                            </c-card-body>
+                        </c-card> <br>
+                        <c-card>
+                            <c-card-header>
+                                <label for="">ESTADO GENERAL</label>
+                            </c-card-header>
+                            <c-card-body>
+                                <c-container fluid>
+                                    <form [formGroup]="fGeneralSate">
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> TECHO
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,25)"
+                                                    formControlName="ceiling">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[25]" readonly
+                                                    formControlName="ceiling">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> CAPOT
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,26)"
+                                                    formControlName="bonnet">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[26]" readonly
+                                                    formControlName="bonnet">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> PUERTAS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,27)"
+                                                    formControlName="doors">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[27]" readonly
+                                                    formControlName="doors">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> PELDAÑOS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,28)"
+                                                    formControlName="steps">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[28]" readonly
+                                                    formControlName="steps">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> TANQUE
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,29)"
+                                                    formControlName="tank">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[29]" readonly
+                                                    formControlName="tank">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> GUARDAFANGOS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,30)"
+                                                    formControlName="mudguards">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[30]" readonly
+                                                    formControlName="mudguards">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> CERRADURAS DE PUERTAS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,31)"
+                                                    formControlName="doorLocks">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[31]" readonly
+                                                    formControlName="doorLocks">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> VALDE
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,32)"
+                                                    formControlName="valdes">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[32]" readonly
+                                                    formControlName="valdes">
+                                            </c-col>
+                                        </c-row>
+                                    </form>
+                                </c-container>
+                            </c-card-body>
+                        </c-card> <br>
+                        <c-card>
+                            <c-card-header>
+                                <label for="">SISTEMA ELECTRICO</label>
+                            </c-card-header>
+                            <c-card-body>
+                                <c-container fluid>
+                                    <form [formGroup]="fElectricSystem">
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> TABLERO DE INSTRUMENTOS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,33)"
+                                                    formControlName="dashboard">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[33]" readonly
+                                                    formControlName="dashboard">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LUZ DELANTERA / INTENSA
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,34)"
+                                                    formControlName="frontLightIntense">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[34]" readonly
+                                                    formControlName="frontLightIntense">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LUZ DIRECCIONALES
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,35)"
+                                                    formControlName="turnSignals">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[35]" readonly
+                                                    formControlName="turnSignals">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LUCES DE FRENOS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,36)"
+                                                    formControlName="brakeLights">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[36]" readonly
+                                                    formControlName="brakeLights">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LUCES DE RETRO
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,37)"
+                                                    formControlName="retroLights">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[37]" readonly
+                                                    formControlName="retroLights">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> ALARMA DE RETRO
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,38)"
+                                                    formControlName="retroAlarm">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[38]" readonly
+                                                    formControlName="retroAlarm">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LUZ INTERIOR / TABLERO / INTERNA
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,39)"
+                                                    formControlName="InteriorLight">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[39]" readonly
+                                                    formControlName="InteriorLight">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LUCES PARQUEO
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,40)"
+                                                    formControlName="parkingLights">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[40]" readonly
+                                                    formControlName="parkingLights">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> PITO
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,41)"
+                                                    formControlName="whistle">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[41]" readonly
+                                                    formControlName="whistle">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> SIRENA
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,42)"
+                                                    formControlName="siren">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[42]" readonly
+                                                    formControlName="siren">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LICUADORA (LUZ ESTROBÓSCOPICA AMARILLA)
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,43)"
+                                                    formControlName="blender">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[43]" readonly
+                                                    formControlName="blender">
+                                            </c-col>
+                                        </c-row>
+                                    </form>
+                                </c-container>
+                            </c-card-body>
+                        </c-card> <br>
+                        <c-card>
+                            <c-card-header>
+                                <label for="">ACCESORIOS DE SEGURIDAD</label>
+                            </c-card-header>
+                            <c-card-body>
+                                <c-container fluid>
+                                    <form [formGroup]="fSafetyAccessories">
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> PAÑO ABSORBENTE
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,44)"
+                                                    formControlName="absorbentCloth">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[44]" readonly
+                                                    formControlName="absorbentCloth">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> BANDERA DE SEGURIDAD VIAL
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,45)"
+                                                    formControlName="roadSafetyFlag">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[45]" readonly
+                                                    formControlName="roadSafetyFlag">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> LINTERNA
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,46)"
+                                                    formControlName="flashlight">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[46]" readonly
+                                                    formControlName="flashlight">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> CONOS DE SEGURIDAD O TRIANGULOS DE SEGURIDAD
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,47)"
+                                                    formControlName="safetyCones">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[47]" readonly
+                                                    formControlName="safetyCones">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> BOTIQUIN DE PRIMEROS AUXILIOS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,48)"
+                                                    formControlName="firstAidKit">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[48]" readonly
+                                                    formControlName="firstAidKit">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> EXTINTOR MAS DE 5 LIBRAS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,49)"
+                                                    formControlName="fireExtinguisher">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[49]" readonly
+                                                    formControlName="fireExtinguisher">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> TACO DE MADERA O PLASTICO
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,50)"
+                                                    formControlName="wooden">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[50]" readonly
+                                                    formControlName="wooden">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> CAJA DE HERRAMIENTAS Y GATA (LLAVE DE TUERCAS)
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,51)"
+                                                    formControlName="toolBox">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[51]" readonly
+                                                    formControlName="toolBox">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> PÉRTIGA
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,52)"
+                                                    formControlName="pole">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[52]" readonly
+                                                    formControlName="pole">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> TUBO DE ESCAPE
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,53)"
+                                                    formControlName="exhaustPipe">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[53]" readonly
+                                                    formControlName="exhaustPipe">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> ROLIBAR JAULA INTERNA
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,54)"
+                                                    formControlName="rollbarInternalCage">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[54]" readonly
+                                                    formControlName="rollbarInternalCage">
+                                            </c-col>
+                                        </c-row>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> CINTAS REFLECTIVAS
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,55)"
+                                                    formControlName="reflectiveTapes">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[55]" readonly
+                                                    formControlName="reflectiveTapes">
+                                            </c-col>
+                                        </c-row>
+                                    </form>
+                                </c-container>
+                            </c-card-body>
+                        </c-card> <br>
+                        <c-card>
+                            <c-card-body>
+                                <c-container>
+                                    <form [formGroup]="fInspectionData">
+
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label cLabel> INFORME DEL EQUIPO
+                                                </label>
+                                            </c-col>
+                                            <c-col>
+                                                <select cSelect (change)="onSelectionChange($event,56)"
+                                                    formControlName="teamReport">
+                                                    <option value=""> [Select] </option>
+                                                    <option *ngFor="let item of selectOptions; let i = index"
+                                                        [value]="item">
+                                                        {{ item }}
+                                                    </option>
+                                                </select>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" [value]="selectedOption[56]" readonly
+                                                    formControlName="teamReport">
+                                            </c-col>
+                                        </c-row>
+                                    </form>
+                                </c-container>
+                            </c-card-body>
+                        </c-card> <br>
+                        <c-card>
+                            <c-card-header>
+                                <label> <b> DATOS </b></label>
+                            </c-card-header>
+                            <c-card-body>
+                                <c-container fluid>
+                                    <form [formGroup]="fInspectionData">
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+
+                                            </c-col>
+                                            <c-col>
+                                                <label> INSPECCIONADO POR: </label>
+                                            </c-col>
+                                            <c-col>
+                                                <label> APROBADO POR: </label>
+                                            </c-col>
+                                        </c-row> <br>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label>NOMBRE</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="inspectorName">
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="approverName">
+                                            </c-col>
+                                        </c-row> <br>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label>CARGO</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="inspectorCargo">
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="approverName">
+                                            </c-col>
+                                        </c-row> <br>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label>FIRMA</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="inspectorFirmaI">
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="text" formControlName="approverFirma">
+                                            </c-col>
+                                        </c-row> <br>
+                                        <c-row class="text-center py-1">
+                                            <c-col>
+                                                <label>FECHA</label>
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="date" formControlName="inspectorDate">
+                                            </c-col>
+                                            <c-col>
+                                                <input cFormControl type="date" formControlName="approverDate">
+                                            </c-col>
+                                        </c-row>
+                                    </form>
+                                </c-container>
+                            </c-card-body>
+                        </c-card> <br>
+                        <c-card> <br>
+                            <c-card-body class="p-1">
+                                <c-row class="text-center py-1 justify-content-center">
+                                    <c-col md="4">
+                                        <div class="d-grid">
+                                            <button cButton color="danger">
+                                                Cancelar
+                                            </button>
+                                        </div>
+                                    </c-col>
+                                    <c-col md="4">
+                                        <div class="d-grid">
+                                            <button cButton color="success" (click)="saveVehicleForm()">
+                                                Guardar
+                                            </button>
+                                        </div>
+                                    </c-col>
+                                </c-row>
+                            </c-card-body>
+                        </c-card>
+                    </c-col>
+                </c-row>
+            </c-container>
+        </c-card-body>
+    </c-card>
+</c-container> <br> <br>

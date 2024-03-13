@@ -1,0 +1,136 @@
+<br>
+<c-container fluid id="vehicle-form">
+    <c-card>
+        <c-card-header>
+            <c-row class="text-center py-1">
+                <c-col>
+                    <button cButton color="warning" class="card-header-button-left" (click)="back()">
+                        <svg cIcon name="cil-arrow-left"></svg>
+                        <b> Seguir Editando</b>
+                    </button>
+                </c-col>
+                <c-col>
+                    <label> <b>PLAN DE ACCIÓN DE INSPECCIONES </b></label>
+                </c-col>
+                <c-col>
+                    <c-dropdown class="card-header-button-rigth">
+                        <button cButton color="warning" (click)="exportToPdf()" (click)="exportToPdf();"
+                            [disabled]="isPrinting">
+                            <div class="lkme-loading-ring" *ngIf="isPrinting"></div>
+                            <svg cIcon name="cil-print" *ngIf="!isPrinting"></svg>
+                            <b> Exportar PDF </b>
+                        </button>
+                    </c-dropdown>
+                </c-col>
+            </c-row>
+        </c-card-header>
+
+        <c-card-body>
+            <div *ngIf="formData">
+                <!-- <h6>Resumen del vehículo {{ formData.fVehicle.vechiclePlaca }}</h6>
+                <p>Tipo de vehículo: {{ formData.fVehicle.vehicleType }}</p> -->
+                <!-- Continúa mostrando los demás datos como desees -->
+                <c-row>
+                    <c-col class="text-center">
+                        <label> ITEM #</label>
+                    </c-col>
+                    <c-col class="text-center">
+                        <label> PLACA</label>
+                    </c-col>
+                    <c-col class="text-center">
+                        <label> ÁREA ASIGNADA</label>
+                    </c-col>
+                    <c-col class="text-center">
+                        <label> TIPO DE VEHICULO</label>
+                    </c-col>
+                    <c-col class="text-center">
+                        <label> DESCRIPCION DEL HALLAZGO</label>
+                    </c-col>
+                    <c-col class="text-center">
+                        <label> HALLAZGO</label>
+                        <h6>FOTO</h6>
+                    </c-col>
+                    <c-col class="text-center">
+                        <label> FECHA DE CUMPLIMIENTO</label>
+                        <c-row>
+                            <c-col>
+                                <h6>INICIO</h6>
+                            </c-col>
+                            <c-col>
+                                <h6>FIN</h6>
+                            </c-col>
+                        </c-row>
+                    </c-col>
+                    <c-col class="text-center">
+                        <label> RESPONSABLE</label>
+                    </c-col>
+                    <c-col class="text-center">
+                        <label> INDICADOR DE CUMPLIMIENTO</label>
+                    </c-col>
+                    <c-col class="text-center">
+                        <label> ANEXO VERIFICACION DE MEDIO</label>
+                    </c-col>
+                    <c-col class="text-center">
+                        <label> CAUSAS DE DESVIO</label>
+                    </c-col>
+                    <c-col class="text-center">
+                        <label> REPROGRAMACIÓN</label>
+                    </c-col>
+                </c-row>
+                <hr>
+                <c-row>
+                    <c-col>
+                        <label> 1</label>
+                    </c-col>
+                    <!-- placa -->
+                    <c-col class="text-center">
+                        <label> {{ formData.fVehicle.vechiclePlaca }}</label>
+                    </c-col>
+                    <!-- area asignada -->
+                    <c-col class="text-center">
+
+                    </c-col>
+                    <!-- tipo de vehiculo -->
+                    <c-col class="text-center">
+                        <label> {{ formData.fVehicle.vehicleType }}</label>
+                    </c-col>
+                    <!-- descripcion del hallazgo -->
+                    <c-col class="text-center">
+
+                    </c-col>
+                    <!-- hallazgo foto -->
+                    <c-col class="text-center">
+
+                    </c-col>
+                    <!-- fecha de cumplimiento -->
+                    <c-col class="text-center">
+                        <label for="">28 ENERO</label>
+                    </c-col>
+                    <!-- responsable -->
+                    <c-col class="text-center">
+                        <label> {{ formData.fVehicle.vehicleConductor
+                            }}</label>
+                    </c-col>
+                    <!-- indicador de cumplimiento -->
+                    <c-col class="text-center">
+                        <label> 100% {{ formData.fVehicle.complianceIndicator }}</label>
+                    </c-col>
+                    <!-- andexo de veificacion de medio -->
+                    <c-col class="text-center">
+                    </c-col>
+                    <!-- causas de desvio -->
+                    <c-col class="text-center">
+                    </c-col>
+                    <!-- preprogramacion -->
+                    <c-col class="text-center">
+                        <label for="">No Aplica </label>
+                    </c-col>
+                </c-row>
+            </div>
+        </c-card-body>
+    </c-card> <br>
+    <button cButton color="success" class="button-footer" (click)="navigateDashboard()">
+        <b>SIGUIENTE </b>
+        <svg cIcon name="cil-arrow-right"></svg>
+    </button>
+</c-container>
